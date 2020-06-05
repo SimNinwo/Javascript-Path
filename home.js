@@ -1,10 +1,17 @@
-// Show the title
-// showMessage("Title...");
+let price = 12;
+showMessage(typeof price);
 
-// Declaring variables
-let name = 'Hiking boots',
-    price = 149.66;
+if (+(1.1 + 1.3).toFixed(2) === 2.4) {
+    let message = 'hello';
+    showMessage(message);
+}
 
-const discounted = false;
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
 
-showMessage(discounted);
+let i = 4;
+while (i > 0) {
+    console.log(i);
+    i--;
+}
