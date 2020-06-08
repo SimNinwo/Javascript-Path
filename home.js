@@ -1,17 +1,40 @@
-let price = 12;
-showMessage(typeof price);
+// Functions
 
-if (+(1.1 + 1.3).toFixed(2) === 2.4) {
-    let message = 'hello';
-    showMessage(message);
-}
+// function getSecretCode(value) {
+//     let code = value * 84;
+//     return code;
+// }
 
-for (let i = 0; i < 5; i++) {
-    console.log(i);
-}
+// showMessage(getSecretCode(2));
 
-let i = 4;
-while (i > 0) {
-    console.log(i);
-    i--;
-}
+// // function scope
+// let key = 42;
+
+// function getCode(value) {
+//     let keyGenerator = function() {
+//         let key = 12;
+//         console.log('in keyGenerator: ', key);
+//         return key;
+//     }
+
+//     let code = value * keyGenerator();
+//     console.log(' in getCode: ', key);
+//     return code;
+// }
+
+// let secretCode = getCode(2);
+// showMessage(secretCode);
+
+const button = document.getElementById('see-review');
+
+button.addEventListener('click', function() {
+    const review = document.getElementById('review');
+
+    if (review.classList.contains('d-none')) {
+        review.classList.remove('d-none');
+        button.textContent = 'CLOSE REVIEW';
+    } else {
+        review.classList.add('d-none');
+        button.textContent = 'SEE REVIEW';
+    }
+});
